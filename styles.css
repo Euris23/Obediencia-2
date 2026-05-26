@@ -1,0 +1,961 @@
+/* =======================================================
+   PREMIUM CINEMATIC PRESENTATION STYLE
+======================================================= */
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+
+  --bg-dark: #06070b;
+  --bg-panel: rgba(14,18,28,0.78);
+
+  --gold: #dfb76c;
+  --gold-soft: #c9a66b;
+  --gold-glow: rgba(223,183,108,0.16);
+
+  --white: #f8fafc;
+  --light: #d8dee9;
+  --muted: #8b95a7;
+
+  --border: rgba(255,255,255,0.06);
+
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --smooth:
+    cubic-bezier(0.22,1,0.36,1);
+
+}
+
+/* =======================================================
+   RESET
+======================================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html,
+body{
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:var(--bg-dark);
+  color:var(--white);
+  font-family:var(--font-sans);
+}
+
+/* =======================================================
+   PRESENTATION CONTAINER
+======================================================= */
+
+.presentation-container{
+
+  position:relative;
+
+  width:100vw;
+  height:100vh;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #182133 0%,
+      #0b0f17 40%,
+      #050608 100%
+    );
+
+}
+
+/* =======================================================
+   SLIDES WRAPPER
+======================================================= */
+
+.slides-wrapper{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+
+/* =======================================================
+   SLIDES
+======================================================= */
+
+.slide{
+
+  position:absolute;
+
+  inset:0;
+
+  width:100%;
+  height:100%;
+
+  opacity:0;
+  visibility:hidden;
+
+  transform:
+    scale(1.03);
+
+  filter:
+    blur(10px);
+
+  transition:
+    opacity 1.4s ease,
+    transform 1.5s var(--smooth),
+    filter 1.4s ease;
+
+  z-index:1;
+
+  padding:
+    6vh 6vw;
+
+}
+
+.slide.active{
+
+  opacity:1;
+  visibility:visible;
+
+  transform:
+    scale(1);
+
+  filter:
+    blur(0);
+
+  z-index:2;
+
+}
+
+/* =======================================================
+   OVERLAY
+======================================================= */
+
+.slide-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.12),
+      rgba(0,0,0,0.45)
+    );
+
+  z-index:0;
+}
+
+/* =======================================================
+   GRID
+======================================================= */
+
+.slide-grid{
+
+  position:relative;
+  z-index:5;
+
+  width:100%;
+  height:100%;
+
+  display:grid;
+
+  grid-template-columns:
+    58% 38%;
+
+  gap:4%;
+
+  align-items:center;
+}
+
+/* =======================================================
+   LEFT PANEL
+======================================================= */
+
+.left-panel{
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  gap:28px;
+
+}
+
+/* =======================================================
+   TITLES
+======================================================= */
+
+.study-header{
+
+  opacity:0;
+
+  transform:
+    translateY(-30px);
+
+  transition:
+    all 1.2s var(--smooth) .2s;
+
+}
+
+.slide.active .study-header{
+
+  opacity:1;
+
+  transform:
+    translateY(0);
+
+}
+
+.study-kicker{
+
+  color:var(--muted);
+
+  font-size:.85rem;
+
+  text-transform:uppercase;
+
+  letter-spacing:5px;
+
+  margin-bottom:8px;
+
+  font-weight:600;
+
+}
+
+.study-title{
+
+  font-family:var(--font-serif);
+
+  font-size:4rem;
+
+  line-height:1;
+
+  color:#f3d39c;
+
+  text-shadow:
+    0 0 30px rgba(223,183,108,0.15),
+    0 8px 30px rgba(0,0,0,0.5);
+
+}
+
+/* =======================================================
+   SCRIPTURE CARD
+======================================================= */
+
+.scripture-card{
+
+  position:relative;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(20,24,34,0.94),
+      rgba(8,10,16,0.88)
+    );
+
+  border:
+    1px solid rgba(223,183,108,0.14);
+
+  border-left:
+    4px solid var(--gold);
+
+  border-radius:26px;
+
+  padding:34px;
+
+  overflow:hidden;
+
+  backdrop-filter:blur(18px);
+
+  box-shadow:
+    0 15px 45px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.04);
+
+  opacity:0;
+
+  transform:
+    translateY(40px)
+    scale(.97);
+
+  transition:
+    all 1.3s var(--smooth) .4s;
+
+}
+
+.slide.active .scripture-card{
+
+  opacity:1;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+}
+
+/* Glow */
+.scripture-card::before{
+
+  content:'';
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      130deg,
+      rgba(255,255,255,0.06),
+      transparent 45%
+    );
+
+  pointer-events:none;
+
+}
+
+.scripture-card::after{
+
+  content:'';
+
+  position:absolute;
+
+  width:240px;
+  height:240px;
+
+  top:-40%;
+  left:-20%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(223,183,108,0.18),
+      transparent 70%
+    );
+
+  filter:blur(18px);
+
+  animation:
+    floatingGlow 9s linear infinite;
+
+}
+
+@keyframes floatingGlow{
+
+  0%{
+    transform:translateX(0);
+  }
+
+  50%{
+    transform:translateX(70px);
+  }
+
+  100%{
+    transform:translateX(0);
+  }
+
+}
+
+/* =======================================================
+   SCRIPTURE CONTENT
+======================================================= */
+
+.scripture-header{
+
+  color:var(--gold);
+
+  text-transform:uppercase;
+
+  letter-spacing:3px;
+
+  font-size:.78rem;
+
+  font-weight:700;
+
+  margin-bottom:16px;
+
+}
+
+.scripture-text{
+
+  font-family:var(--font-serif);
+
+  font-size:1.9rem;
+
+  line-height:1.55;
+
+  color:var(--white);
+
+  font-style:italic;
+
+}
+
+/* =======================================================
+   EXEGESIS
+======================================================= */
+
+.exegesis-card{
+
+  opacity:0;
+
+  transform:
+    translateY(30px);
+
+  transition:
+    all 1.2s var(--smooth) .7s;
+
+}
+
+.slide.active .exegesis-card{
+
+  opacity:1;
+
+  transform:
+    translateY(0);
+
+}
+
+.exegesis-list{
+
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:14px;
+
+}
+
+.exegesis-item{
+
+  position:relative;
+
+  padding-left:30px;
+
+  color:#cbd5e1;
+
+  line-height:1.6;
+
+  font-size:1.08rem;
+
+}
+
+.exegesis-item::before{
+
+  content:'•';
+
+  position:absolute;
+
+  left:8px;
+  top:-1px;
+
+  color:var(--gold);
+
+  font-size:1.3rem;
+
+}
+
+/* =======================================================
+   RIGHT PANEL
+======================================================= */
+
+.right-panel{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+/* =======================================================
+   VISUAL CONTAINER
+======================================================= */
+
+.visual-container{
+
+  position:relative;
+
+  width:100%;
+
+  aspect-ratio:16/10;
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  background:#080b11;
+
+  border:
+    1px solid rgba(255,255,255,0.06);
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.55);
+
+  opacity:0;
+
+  transform:
+    scale(.95);
+
+  transition:
+    all 1.5s var(--smooth) .5s;
+
+}
+
+.slide.active .visual-container{
+
+  opacity:1;
+
+  transform:
+    scale(1);
+
+}
+
+.visual-bg-image{
+
+  width:100%;
+  height:100%;
+
+  background-size:cover;
+  background-position:center;
+
+  transition:
+    transform 12s ease;
+
+}
+
+.slide.active .visual-bg-image{
+
+  transform:
+    scale(1.06);
+
+}
+
+.visual-overlay{
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      transparent 35%,
+      rgba(0,0,0,.75) 100%
+    );
+
+}
+
+.visual-label{
+
+  position:absolute;
+
+  bottom:18px;
+  left:18px;
+
+  padding:
+    8px 14px;
+
+  border-radius:999px;
+
+  background:
+    rgba(0,0,0,.55);
+
+  backdrop-filter:blur(12px);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  color:var(--gold);
+
+  font-size:.7rem;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  font-weight:600;
+
+  z-index:10;
+
+}
+
+/* =======================================================
+   COVER
+======================================================= */
+
+.slide-cover{
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+}
+
+.cover-title{
+
+  font-family:var(--font-serif);
+
+  font-size:5.5rem;
+
+  line-height:1.05;
+
+  margin-bottom:26px;
+
+  text-shadow:
+    0 15px 45px rgba(0,0,0,.6);
+
+}
+
+.cover-subtitle{
+
+  max-width:850px;
+
+  font-size:1.5rem;
+
+  line-height:1.6;
+
+  color:#e7c58f;
+
+  font-style:italic;
+
+}
+
+/* =======================================================
+   SECTION SLIDES
+======================================================= */
+
+.slide-section{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  overflow:hidden;
+
+}
+
+.slide-section::before{
+
+  content:'';
+
+  position:absolute;
+
+  width:900px;
+  height:900px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(223,183,108,0.08),
+      transparent 70%
+    );
+
+  top:50%;
+  left:50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  animation:
+    breathingLight 10s ease-in-out infinite;
+
+}
+
+@keyframes breathingLight{
+
+  0%{
+    transform:
+      translate(-50%,-50%)
+      scale(.92);
+
+    opacity:.5;
+  }
+
+  50%{
+    transform:
+      translate(-50%,-50%)
+      scale(1.04);
+
+    opacity:1;
+  }
+
+  100%{
+    transform:
+      translate(-50%,-50%)
+      scale(.92);
+
+    opacity:.5;
+  }
+
+}
+
+.section-content{
+
+  position:relative;
+
+  z-index:5;
+
+}
+
+.section-kicker{
+
+  color:var(--muted);
+
+  text-transform:uppercase;
+
+  letter-spacing:8px;
+
+  margin-bottom:18px;
+
+}
+
+.section-title{
+
+  font-family:var(--font-serif);
+
+  font-size:5rem;
+
+  line-height:1;
+
+  color:#f5d08a;
+
+  margin-bottom:24px;
+
+  text-shadow:
+    0 15px 40px rgba(0,0,0,.6);
+
+}
+
+.section-divider{
+
+  width:90px;
+  height:2px;
+
+  margin:
+    0 auto 24px auto;
+
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      var(--gold),
+      transparent
+    );
+
+}
+
+.section-subtitle{
+
+  color:#d1d5db;
+
+  font-size:1.15rem;
+
+  line-height:1.7;
+
+}
+
+/* =======================================================
+   FINAL SLIDE
+======================================================= */
+
+.slide-final{
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+}
+
+.final-grid{
+
+  max-width:1000px;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:34px;
+
+}
+
+.final-highlight-title{
+
+  font-family:var(--font-serif);
+
+  font-size:4rem;
+
+  color:#f3d39c;
+
+}
+
+.final-verse-box{
+
+  padding:40px;
+
+  border-radius:28px;
+
+  background:
+    rgba(14,18,26,.75);
+
+  border:
+    1px solid rgba(255,255,255,.06);
+
+  backdrop-filter:blur(18px);
+
+}
+
+.final-verse-text{
+
+  font-family:var(--font-serif);
+
+  font-size:2rem;
+
+  line-height:1.6;
+
+  font-style:italic;
+
+}
+
+/* =======================================================
+   CONTROLS
+======================================================= */
+
+.controls-overlay{
+
+  position:absolute;
+
+  bottom:0;
+  left:0;
+
+  width:100%;
+
+  height:70px;
+
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  padding:
+    0 40px;
+
+  z-index:50;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.8),
+      transparent
+    );
+
+}
+
+.control-buttons{
+
+  display:flex;
+  gap:12px;
+
+}
+
+.control-btn{
+
+  width:40px;
+  height:40px;
+
+  border:none;
+
+  border-radius:50%;
+
+  cursor:pointer;
+
+  color:var(--white);
+
+  background:
+    rgba(255,255,255,.06);
+
+  backdrop-filter:blur(12px);
+
+  transition:
+    all .35s ease;
+
+}
+
+.control-btn:hover{
+
+  transform:
+    scale(1.08);
+
+  background:
+    var(--gold);
+
+  color:#000;
+
+  box-shadow:
+    0 0 20px rgba(223,183,108,.3);
+
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media(max-width:992px){
+
+  body{
+    overflow:auto;
+  }
+
+  .slide{
+    overflow:auto;
+    height:auto;
+    min-height:100vh;
+  }
+
+  .slide-grid{
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+  }
+
+  .study-title{
+    font-size:3rem;
+  }
+
+  .section-title{
+    font-size:3.5rem;
+  }
+
+  .cover-title{
+    font-size:4rem;
+  }
+
+}
+
+@media(max-width:576px){
+
+  .study-title{
+    font-size:2.3rem;
+  }
+
+  .scripture-text{
+    font-size:1.3rem;
+  }
+
+  .section-title{
+    font-size:2.5rem;
+  }
+
+  .cover-title{
+    font-size:2.8rem;
+  }
+
+}
