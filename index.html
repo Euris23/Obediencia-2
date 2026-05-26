@@ -1,86 +1,101 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Obediencia a Pesar de... | Estudio Bíblico Expositivo</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Obediencia a Pesar de... | Estudio Bíblico Premium</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- TITULOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <!-- TEXTO -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
 <div class="presentation-container">
 
-  <!-- Navegación -->
+  <!-- ================= NAVEGACIÓN ================= -->
   <div class="nav-trigger nav-trigger-left" id="trigger-left"></div>
   <div class="nav-trigger nav-trigger-right" id="trigger-right"></div>
 
   <div class="slides-wrapper">
 
-    <!-- ========================================= -->
-    <!-- PORTADA -->
-    <!-- ========================================= -->
-    <section class="slide slide-cover active">
+    <!-- ================================================= -->
+    <!-- ==================== PORTADA ==================== -->
+    <!-- ================================================= -->
 
+    <section class="slide slide-cover active">
       <div class="slide-bg" style="background-image:url('assets/portada.png')"></div>
       <div class="slide-overlay"></div>
 
-      <div class="cover-accent"></div>
+      <div class="cover-glow"></div>
 
-      <div class="cover-kicker">
-        Estudio Bíblico Expositivo
-      </div>
+      <div class="cover-content">
 
-      <h1 class="cover-title">
-        La obediencia<br>
-        a pesar de...
-      </h1>
-
-      <p class="cover-subtitle">
-        “La obediencia no depende del proceso;
-        depende de la confianza en Dios.”
-      </p>
-
-    </section>
-
-    <!-- ========================================= -->
-    <!-- TEMA 1 -->
-    <!-- ========================================= -->
-    <section class="slide slide-section">
-
-      <div class="slide-overlay"></div>
-
-      <div class="section-content">
-
-        <div class="section-kicker">
-          Tema 01
+        <div class="cover-kicker">
+          ESTUDIO BÍBLICO EXPOSITIVO
         </div>
 
-        <h2 class="section-title">
+        <h1 class="cover-title">
+          La obediencia<br>
+          a pesar de...
+        </h1>
+
+        <p class="cover-subtitle">
+          “La obediencia no depende del proceso;
+          depende de la confianza en Dios.”
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ========= TRANSICIÓN TEMA: MIEDO ================ -->
+    <!-- ================================================= -->
+
+    <section class="slide topic-slide">
+      <div class="topic-background"></div>
+
+      <div class="topic-content">
+
+        <div class="topic-small">
+          Tema 1
+        </div>
+
+        <h2 class="topic-title">
           Obedecer<br>
           a pesar del miedo
         </h2>
 
-        <div class="section-divider"></div>
+        <div class="topic-line"></div>
 
-        <p class="section-subtitle">
-          La obediencia comienza cuando la fe vence al temor.
+        <p class="topic-description">
+          Dios sigue llamando personas inseguras,
+          temerosas y llenas de dudas.
+          La obediencia comienza antes de sentirnos preparados.
         </p>
 
       </div>
-
     </section>
 
-    <!-- ========================================= -->
-    <!-- MOISÉS -->
-    <!-- ========================================= -->
+    <!-- ================================================= -->
+    <!-- ==================== MOISÉS ===================== -->
+    <!-- ================================================= -->
+
     <section class="slide">
 
       <div class="slide-overlay"></div>
 
       <div class="slide-grid">
 
-        <!-- Left -->
         <div class="left-panel">
 
           <header class="study-header">
@@ -102,8 +117,9 @@
             </div>
 
             <p class="scripture-text">
-              “¿Quién soy yo para que vaya a Faraón...? 
-              Y él respondió: Ve, porque yo estaré contigo...”
+              “¿Quién soy yo para que vaya a Faraón...?
+              Y él respondió:
+              Ve, porque yo estaré contigo...”
             </p>
 
           </div>
@@ -126,7 +142,6 @@
 
         </div>
 
-        <!-- Right -->
         <div class="right-panel">
 
           <div class="visual-container">
@@ -135,11 +150,68 @@
               La Zarza del Llamado
             </div>
 
-            <div class="visual-bg-image"
-                 style="background-image:url('assets/moises.png')">
-            </div>
+            <svg class="svg-canvas" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
 
-            <div class="visual-overlay"></div>
+              <defs>
+
+                <linearGradient id="fireGrad" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0%" stop-color="#7d1c1c"/>
+                  <stop offset="40%" stop-color="#e25822"/>
+                  <stop offset="85%" stop-color="#fbd38d"/>
+                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                </linearGradient>
+
+                <linearGradient id="divineLight" x1="0.3" y1="0" x2="0.7" y2="1">
+                  <stop offset="0%" stop-color="#dfb76c" stop-opacity="0.35"/>
+                  <stop offset="100%" stop-color="#07090e" stop-opacity="0"/>
+                </linearGradient>
+
+                <filter id="glow">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"/>
+                    <feMergeNode in="SourceGraphic"/>
+                  </feMerge>
+                </filter>
+
+              </defs>
+
+              <rect width="100%" height="100%" fill="#07090e"/>
+
+              <path d="M120,0 L280,0 L350,250 L50,250 Z"
+                    fill="url(#divineLight)"
+                    class="divine-light-shaft"/>
+
+              <path d="M0,220 Q120,190 240,210 T400,200 L400,250 L0,250 Z"
+                    fill="#0b0e14"
+                    stroke="#1f2530"
+                    stroke-width="1.5"/>
+
+              <g stroke="#1a110a"
+                 stroke-width="3"
+                 fill="none"
+                 stroke-linecap="round">
+
+                <path d="M200,210 Q200,140 160,110"/>
+                <path d="M200,210 Q215,130 250,105"/>
+                <path d="M200,210 Q185,150 140,140"/>
+                <path d="M200,210 Q225,160 270,150"/>
+
+              </g>
+
+              <g filter="url(#glow)">
+
+                <path d="M180,180 Q190,110 200,85 Q210,115 220,185 Z"
+                      fill="url(#fireGrad)"
+                      class="bush-flame bush-flame-1"/>
+
+                <path d="M160,190 Q175,130 190,105 Q200,130 215,190 Z"
+                      fill="url(#fireGrad)"
+                      class="bush-flame bush-flame-2"/>
+
+              </g>
+
+            </svg>
 
           </div>
 
@@ -149,9 +221,10 @@
 
     </section>
 
-    <!-- ========================================= -->
-    <!-- GEDEÓN -->
-    <!-- ========================================= -->
+    <!-- ================================================= -->
+    <!-- ==================== GEDEÓN ===================== -->
+    <!-- ================================================= -->
+
     <section class="slide">
 
       <div class="slide-overlay"></div>
@@ -190,11 +263,13 @@
             <ul class="exegesis-list">
 
               <li class="exegesis-item">
-                Dios ve tu potencial de fe, no tus temores actuales.
+                Dios ve tu potencial de fe,
+                no tus temores actuales.
               </li>
 
               <li class="exegesis-item">
-                El verdadero valor nace al confiar en Su palabra.
+                El verdadero valor nace
+                al confiar en Su palabra.
               </li>
 
             </ul>
@@ -211,11 +286,33 @@
               El Trigo del Lagar
             </div>
 
-            <div class="visual-bg-image"
-                 style="background-image:url('assets/gedeon.png')">
-            </div>
+            <svg class="svg-canvas" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
 
-            <div class="visual-overlay"></div>
+              <rect width="100%" height="100%" fill="#07090c"/>
+
+              <path d="M120,-10 L280,-10 L340,260 L80,260 Z"
+                    fill="url(#divineLight)"
+                    class="divine-light-shaft"/>
+
+              <path d="M0,210 C150,195 250,215 400,205 L400,250 L0,250 Z"
+                    fill="#0a0d14"/>
+
+              <g stroke="#dfb76c"
+                 fill="none"
+                 stroke-linecap="round">
+
+                <path d="M130,210 Q120,130 110,90"
+                      stroke-width="2"/>
+
+                <path d="M145,210 Q145,120 130,75"
+                      stroke-width="2"/>
+
+                <path d="M160,210 Q170,140 165,95"
+                      stroke-width="1.8"/>
+
+              </g>
+
+            </svg>
 
           </div>
 
@@ -225,37 +322,40 @@
 
     </section>
 
-    <!-- ========================================= -->
-    <!-- TEMA 2 -->
-    <!-- ========================================= -->
-    <section class="slide slide-section">
+    <!-- ================================================= -->
+    <!-- ========= TRANSICIÓN TEMA: NO ENTENDER ========== -->
+    <!-- ================================================= -->
 
-      <div class="slide-overlay"></div>
+    <section class="slide topic-slide">
 
-      <div class="section-content">
+      <div class="topic-background"></div>
 
-        <div class="section-kicker">
-          Tema 02
+      <div class="topic-content">
+
+        <div class="topic-small">
+          Tema 2
         </div>
 
-        <h2 class="section-title">
+        <h2 class="topic-title">
           Obedecer<br>
-          sin entender
+          a pesar de no entender
         </h2>
 
-        <div class="section-divider"></div>
+        <div class="topic-line"></div>
 
-        <p class="section-subtitle">
-          Dios no siempre revela el camino completo.
+        <p class="topic-description">
+          La fe verdadera no exige ver todo el camino.
+          Solo necesita confiar en quien guía.
         </p>
 
       </div>
 
     </section>
 
-    <!-- ========================================= -->
-    <!-- ABRAHAM -->
-    <!-- ========================================= -->
+    <!-- ================================================= -->
+    <!-- ==================== ABRAHAM ==================== -->
+    <!-- ================================================= -->
+
     <section class="slide">
 
       <div class="slide-overlay"></div>
@@ -283,7 +383,8 @@
             </div>
 
             <p class="scripture-text">
-              “...obedeció para salir al lugar que había de recibir como herencia;
+              “...obedeció para salir al lugar
+              que había de recibir como herencia;
               y salió sin saber a dónde iba.”
             </p>
 
@@ -294,7 +395,7 @@
             <ul class="exegesis-list">
 
               <li class="exegesis-item">
-                Caminar en fe sin exigir explicaciones previas.
+                Caminar en fe sin exigir explicaciones previas a Dios.
               </li>
 
               <li class="exegesis-item">
@@ -316,8 +417,7 @@
             </div>
 
             <div class="visual-bg-image"
-                 style="background-image:url('assets/abraham.png')">
-            </div>
+                 style="background-image:url('assets/abraham.png')"></div>
 
             <div class="visual-overlay"></div>
 
@@ -329,37 +429,40 @@
 
     </section>
 
-    <!-- ========================================= -->
-    <!-- TEMA 3 -->
-    <!-- ========================================= -->
-    <section class="slide slide-section">
+    <!-- ================================================= -->
+    <!-- ========= TRANSICIÓN TEMA: DOLOR ================ -->
+    <!-- ================================================= -->
 
-      <div class="slide-overlay"></div>
+    <section class="slide topic-slide">
 
-      <div class="section-content">
+      <div class="topic-background"></div>
 
-        <div class="section-kicker">
-          Tema 03
+      <div class="topic-content">
+
+        <div class="topic-small">
+          Tema 3
         </div>
 
-        <h2 class="section-title">
+        <h2 class="topic-title">
           Obedecer<br>
           a pesar del dolor
         </h2>
 
-        <div class="section-divider"></div>
+        <div class="topic-line"></div>
 
-        <p class="section-subtitle">
-          La fidelidad también se demuestra en medio de las pérdidas.
+        <p class="topic-description">
+          La fidelidad a Dios no depende
+          de si el proceso es cómodo o difícil.
         </p>
 
       </div>
 
     </section>
 
-    <!-- ========================================= -->
-    <!-- JOB -->
-    <!-- ========================================= -->
+    <!-- ================================================= -->
+    <!-- ====================== JOB ====================== -->
+    <!-- ================================================= -->
+
     <section class="slide">
 
       <div class="slide-overlay"></div>
@@ -404,8 +507,7 @@
             </div>
 
             <div class="visual-bg-image"
-                 style="background-image:url('assets/job.png')">
-            </div>
+                 style="background-image:url('assets/job.png')"></div>
 
             <div class="visual-overlay"></div>
 
@@ -417,26 +519,406 @@
 
     </section>
 
-    <!-- ========================================= -->
-    <!-- FINAL -->
-    <!-- ========================================= -->
+    <!-- ================================================= -->
+    <!-- ======== TRANSICIÓN TEMA: PRESIÓN =============== -->
+    <!-- ================================================= -->
+
+    <section class="slide topic-slide">
+
+      <div class="topic-background"></div>
+
+      <div class="topic-content">
+
+        <div class="topic-small">
+          Tema 4
+        </div>
+
+        <h2 class="topic-title">
+          Obedecer<br>
+          a pesar de la presión
+        </h2>
+
+        <div class="topic-line"></div>
+
+        <p class="topic-description">
+          Permanecer fiel cuando todos esperan
+          que abandones tus convicciones.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ==================== DANIEL ===================== -->
+    <!-- ================================================= -->
+
+    <section class="slide">
+
+      <div class="slide-overlay"></div>
+
+      <div class="slide-grid">
+
+        <div class="left-panel">
+
+          <header class="study-header">
+
+            <div class="study-kicker">
+              Obedecer a pesar de la presión
+            </div>
+
+            <h2 class="study-title">
+              Daniel
+            </h2>
+
+          </header>
+
+          <div class="scripture-card">
+
+            <div class="scripture-header">
+              Daniel 6:10
+            </div>
+
+            <p class="scripture-text">
+              “...se arrodillaba tres veces al día,
+              y oraba y daba gracias delante de su Dios...”
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="right-panel">
+
+          <div class="visual-container">
+
+            <div class="visual-label">
+              La Fidelidad en el Foso
+            </div>
+
+            <div class="visual-bg-image"
+                 style="background-image:url('assets/daniel.png')"></div>
+
+            <div class="visual-overlay"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ======== TRANSICIÓN TEMA: FRUSTRACIÓN =========== -->
+    <!-- ================================================= -->
+
+    <section class="slide topic-slide">
+
+      <div class="topic-background"></div>
+
+      <div class="topic-content">
+
+        <div class="topic-small">
+          Tema 5
+        </div>
+
+        <h2 class="topic-title">
+          Obedecer<br>
+          a pesar de la frustración
+        </h2>
+
+        <div class="topic-line"></div>
+
+        <p class="topic-description">
+          Cuando todo parece fallar,
+          la voz de Dios sigue siendo suficiente.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ==================== PEDRO ====================== -->
+    <!-- ================================================= -->
+
+    <section class="slide">
+
+      <div class="slide-overlay"></div>
+
+      <div class="slide-grid">
+
+        <div class="left-panel">
+
+          <header class="study-header">
+
+            <div class="study-kicker">
+              Obedecer a pesar de la frustración
+            </div>
+
+            <h2 class="study-title">
+              Pedro
+            </h2>
+
+          </header>
+
+          <div class="scripture-card">
+
+            <div class="scripture-header">
+              Lucas 5:5
+            </div>
+
+            <p class="scripture-text">
+              “...toda la noche hemos trabajado,
+              y nada hemos pescado;
+              mas en tu palabra echaré la red.”
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ========= TRANSICIÓN TEMA: RECHAZO ============== -->
+    <!-- ================================================= -->
+
+    <section class="slide topic-slide">
+
+      <div class="topic-background"></div>
+
+      <div class="topic-content">
+
+        <div class="topic-small">
+          Tema 6
+        </div>
+
+        <h2 class="topic-title">
+          Obedecer<br>
+          a pesar del rechazo
+        </h2>
+
+        <div class="topic-line"></div>
+
+        <p class="topic-description">
+          El propósito de Dios vale más
+          que la aprobación de las personas.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- =================== JEREMÍAS ==================== -->
+    <!-- ================================================= -->
+
+    <section class="slide">
+
+      <div class="slide-overlay"></div>
+
+      <div class="slide-grid">
+
+        <div class="left-panel">
+
+          <header class="study-header">
+
+            <div class="study-kicker">
+              Obedecer a pesar del rechazo
+            </div>
+
+            <h2 class="study-title">
+              Jeremías
+            </h2>
+
+          </header>
+
+          <div class="scripture-card">
+
+            <div class="scripture-header">
+              Jeremías 1:8
+            </div>
+
+            <p class="scripture-text">
+              “No temas delante de ellos,
+              porque contigo estoy para librarte...”
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ========= TRANSICIÓN TEMA: ESPERA =============== -->
+    <!-- ================================================= -->
+
+    <section class="slide topic-slide">
+
+      <div class="topic-background"></div>
+
+      <div class="topic-content">
+
+        <div class="topic-small">
+          Tema 7
+        </div>
+
+        <h2 class="topic-title">
+          Obedecer<br>
+          a pesar de la espera
+        </h2>
+
+        <div class="topic-line"></div>
+
+        <p class="topic-description">
+          La fe persevera incluso
+          cuando las respuestas tardan.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ===================== NOÉ ======================= -->
+    <!-- ================================================= -->
+
+    <section class="slide">
+
+      <div class="slide-overlay"></div>
+
+      <div class="slide-grid">
+
+        <div class="left-panel">
+
+          <header class="study-header">
+
+            <div class="study-kicker">
+              Obedecer a pesar de la espera
+            </div>
+
+            <h2 class="study-title">
+              Noé
+            </h2>
+
+          </header>
+
+          <div class="scripture-card">
+
+            <div class="scripture-header">
+              Génesis 6:22
+            </div>
+
+            <p class="scripture-text">
+              “Y lo hizo así Noé;
+              hizo conforme a todo lo que Dios le mandó.”
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ======== TRANSICIÓN TEMA: DESESPERACIÓN ========= -->
+    <!-- ================================================= -->
+
+    <section class="slide topic-slide">
+
+      <div class="topic-background"></div>
+
+      <div class="topic-content">
+
+        <div class="topic-small">
+          Advertencia Final
+        </div>
+
+        <h2 class="topic-title">
+          Cuando la desesperación<br>
+          desvía la obediencia
+        </h2>
+
+        <div class="topic-line"></div>
+
+        <p class="topic-description">
+          La impaciencia puede llevarnos
+          a salirnos del tiempo perfecto de Dios.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ===================== SAÚL ====================== -->
+    <!-- ================================================= -->
+
+    <section class="slide">
+
+      <div class="slide-overlay"></div>
+
+      <div class="slide-grid">
+
+        <div class="left-panel">
+
+          <header class="study-header">
+
+            <div class="study-kicker">
+              Cuando la desesperación desvía
+            </div>
+
+            <h2 class="study-title">
+              Saúl
+            </h2>
+
+          </header>
+
+          <div class="scripture-card">
+
+            <div class="scripture-header">
+              1 Samuel 13:13
+            </div>
+
+            <p class="scripture-text">
+              “Locamente has hecho;
+              no guardaste el mandamiento de Jehová tu Dios...”
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ================================================= -->
+    <!-- ==================== FINAL ====================== -->
+    <!-- ================================================= -->
+
     <section class="slide slide-final">
 
       <div class="slide-overlay"></div>
 
       <div class="final-grid">
 
-        <header class="final-header-block">
+        <div class="final-kicker-title">
+          Llamado Final
+        </div>
 
-          <div class="final-kicker-title">
-            Llamado Final
-          </div>
-
-          <h2 class="final-highlight-title">
-            La obediencia es mejor que los sacrificios
-          </h2>
-
-        </header>
+        <h2 class="final-highlight-title">
+          La obediencia es mejor que los sacrificios
+        </h2>
 
         <div class="final-verse-box">
 
@@ -471,41 +953,34 @@
 
   </div>
 
-  <!-- ========================================= -->
-  <!-- CONTROLES -->
-  <!-- ========================================= -->
+  <!-- ================================================= -->
+  <!-- ================= CONTROLES ===================== -->
+  <!-- ================================================= -->
+
   <footer class="controls-overlay">
 
     <div class="slides-counter">
       <span id="current-count">1</span> /
-      <span id="total-count">8</span>
+      <span id="total-count">17</span>
     </div>
 
     <div class="control-buttons">
 
       <button class="control-btn" id="prev-btn">
-        &larr;
+        ←
       </button>
 
       <button class="control-btn" id="play-btn">
-        &#9654;
+        ▶
       </button>
 
       <button class="control-btn" id="next-btn">
-        &rarr;
+        →
       </button>
 
     </div>
 
     <div class="control-buttons">
-
-      <button class="control-btn" id="notes-btn">
-        📝
-      </button>
-
-      <button class="control-btn" id="thumb-btn">
-        📜
-      </button>
 
       <button class="control-btn" id="fullscreen-btn">
         ⛶
@@ -515,27 +990,9 @@
 
   </footer>
 
-  <!-- Barra -->
   <div class="progress-bar-container">
     <div class="progress-bar-fill"></div>
   </div>
-
-  <!-- Notas -->
-  <div class="speaker-notes-panel" id="speaker-notes-panel">
-
-    <h3>Notas del Predicador</h3>
-
-    <p id="current-note">
-      Notas de la sesión...
-    </p>
-
-  </div>
-
-  <!-- Miniaturas -->
-  <div class="thumbnails-drawer" id="thumbnails-drawer"></div>
-
-  <!-- Toast -->
-  <div class="toast-msg" id="toast-msg"></div>
 
 </div>
 
